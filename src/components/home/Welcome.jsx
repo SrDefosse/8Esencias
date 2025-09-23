@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Button from '../ui/button'
+import Button from '../ui/Button'
 
 const Welcome = () => {
   const sectionRef = useRef(null)
