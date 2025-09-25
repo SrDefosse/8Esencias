@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../../components/ui/Button'
 
 const Hero = () => {
@@ -19,12 +20,16 @@ const Hero = () => {
           Descubre la tradición milenaria del mezcal artesanal mexicano en cada gota
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-end items-end sm:items-center">
-          <Button to="/mezcal">
-            Nuestros Mezcales
-          </Button>
-          <Button to="/about" variant="outline">
-            Nuestra Historia
-          </Button>
+          <Link to="/mezcal">
+            <Button>
+              Nuestros Mezcales
+            </Button>
+          </Link>
+          <Link to="/about">
+            <Button variant="outline">
+              Nuestra Historia
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
