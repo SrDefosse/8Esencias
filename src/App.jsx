@@ -14,7 +14,7 @@ import Contact from './pages/contact/Contact'
 import ScrollToTop from './hooks/ScrollToTop'
 
 function App() {
-  // 🚀 Configurar ScrollSmoother de GSAP
+  // Configurar ScrollSmoother de GSAP
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollSmoother)
     
@@ -34,10 +34,10 @@ function App() {
   
   return (
     <Router>
+      <Navbar />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="min-h-screen bg-white flex flex-col">
-            <Navbar />
             <main>
               <ScrollToTop />
               <Routes>
