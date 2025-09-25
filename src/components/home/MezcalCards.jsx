@@ -6,7 +6,6 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { Link } from 'react-router-dom';
 import Button from '../../components/ui/Button'
 
 const ROTATION_RANGE = 35;
@@ -29,15 +28,14 @@ const MezcalCards = () => {
         <h2 className="text-4xl font-bold text-white mb-8">
           Mezcal Espadín
         </h2>
-        <Link to="/mezcal">
-          <Button 
-            variant="filled" 
-            color="AC8658"
-            className="text-xl px-12 py-4"
-          >
-            Conocer más
-          </Button>
-        </Link>
+        <Button 
+          to="/mezcal"
+          variant="filled" 
+          color="AC8658"
+          className="text-xl px-12 py-4"
+        >
+          Conocer más
+        </Button>
       </div>
     </div>
   );

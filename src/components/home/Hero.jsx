@@ -1,6 +1,7 @@
 import Button from '../../components/ui/Button'
 
 const Hero = () => {
+
   return (
     <section 
       className="relative h-screen flex items-center justify-end px-6 md:px-16 
@@ -18,10 +19,10 @@ const Hero = () => {
           Descubre la tradición milenaria del mezcal artesanal mexicano en cada gota
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-end items-end sm:items-center">
-          <Button>
+          <Button to="/mezcal">
             Nuestros Mezcales
           </Button>
-          <Button variant="outline">
+          <Button to="/about" variant="outline">
             Nuestra Historia
           </Button>
         </div>
