@@ -22,13 +22,17 @@ const MezcalCards = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
       }}
-      className="relative min-h-[800px] bg-neutral-900 flex flex-col items-center justify-center"
+      className="relative min-h-[800px] bg-neutral-900 flex flex-col items-center justify-center py-24"
     >
       <TiltShineCard />
       <div className="mt-12 text-center">
         <h2 className="text-4xl font-bold text-white mb-8">
           Mezcal Espadín
         </h2>
+        <p className="text-lg text-white mb-8 max-w-md mx-auto">
+          Una destilación artesanal que nace del corazón de Oaxaca, con aromas que evocan tierra húmeda, cítricos frescos y sutiles toques ahumados. 
+          
+        </p>
         <Link to="/mezcal">
           <Button 
             variant="filled" 

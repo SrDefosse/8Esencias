@@ -12,11 +12,13 @@ const Home = () => {
       {/* Ritual Story Section */}
       <RevealingText />
 
+      {/* Mezcal Cards Section */}
+      <MezcalCards />
+
       {/* Welcome Section */}
       <Welcome />
 
-      {/* Mezcal Cards Section */}
-      <MezcalCards />
+      
     </div>
   )
 }

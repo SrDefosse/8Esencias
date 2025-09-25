@@ -1,14 +1,10 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
-
-const Button = React.forwardRef(({
+const Button = ({
   variant = 'filled',
   color = 'AC8658',
   className = '',
   children,
-  to,
   ...props
-}, ref) => {
+}) => {
   const normalizeColorKey = (value) => String(value || '').replace('#', '').toUpperCase();
 
   const baseClasses = 'inline-flex items-center justify-center px-8 py-3 rounded-lg text-lg font-medium transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2';
@@ -35,27 +31,14 @@ const Button = React.forwardRef(({
   const selectedColor = colorVariants[normalizeColorKey(color)] || colorVariants['AC8658'];
   const selectedClasses = selectedColor[variant] || selectedColor.filled;
 
-  const finalClassName = `${baseClasses} ${selectedClasses} ${className}`.trim();
-
-  const commonProps = {
-    className: finalClassName,
-    ref,
-    ...props
-  };
-
-  if (to) {
-    return (
-      <Link to={to} {...commonProps}>
-        {children}
-      </Link>
-    );
-  }
-
   return (
-    <button {...commonProps}>
+    <button
+      className={`${baseClasses} ${selectedClasses} ${className}`.trim()}
+      {...props}
+    >
       {children}
     </button>
   );
-});
+};
 
 export default Button;

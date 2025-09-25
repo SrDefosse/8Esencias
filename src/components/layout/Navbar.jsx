@@ -119,67 +119,6 @@ const NavLink = ({ children, href, FlyoutContent }) => {
   );
 };
 
-// Flyout content components
-const NosotrosContent = () => {
-  return (
-    <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
-      <div className="col-span-12 flex flex-col justify-between bg-[#AC8658] p-6 lg:col-span-4">
-        <div>
-          <h2 className="mb-2 text-xl font-semibold text-white">Nosotros</h2>
-          <p className="mb-6 max-w-xs text-sm text-[#F8F7EA]">
-            Tradición familiar en la elaboración de mezcal artesanal mexicano desde hace generaciones.
-          </p>
-        </div>
-        <Link
-          to="/about"
-          className="flex items-center gap-1 text-xs text-[#AC8658] hover:underline"
-        >
-          Conoce más <FiArrowRight />
-        </Link>
-      </div>
-      <div className="col-span-12 grid grid-cols-2 grid-rows-2 gap-3 bg-white p-6 lg:col-span-8">
-        <Link
-          to="/about"
-          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
-        >
-          <h3 className="mb-1 font-semibold">Historia</h3>
-          <p className="text-xs">
-            Descubre la tradición ancestral detrás de cada botella de 8 Esencias.
-          </p>
-        </Link>
-        <Link
-          to="/process"
-          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
-        >
-          <h3 className="mb-1 font-semibold">Proceso</h3>
-          <p className="text-xs">
-            Conoce nuestro método artesanal de producción paso a paso.
-          </p>
-        </Link>
-        <Link
-          to="/about#team"
-          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
-        >
-          <h3 className="mb-1 font-semibold">Maestros</h3>
-          <p className="text-xs">
-            Los artesanos que dan vida a nuestros mezcales excepcionales.
-          </p>
-        </Link>
-        <Link
-          to="/about#values"
-          className="rounded border-2 border-neutral-200 bg-white p-3 transition-colors hover:bg-neutral-100"
-        >
-          <h3 className="mb-1 font-semibold">Valores</h3>
-          <p className="text-xs">
-            Los principios que guían cada decisión en 8 Esencias.
-          </p>
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-
 const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -287,7 +226,7 @@ const MobileMenu = () => {
                 <MobileMenuLink
                   key={l.text}
                   href={l.href}
-                  FoldContent={l.text === "Nosotros" ? () => null : null}
+                  FoldContent={null}
                   setMenuOpen={setOpen}
                 >
                   {l.text}
@@ -312,7 +251,6 @@ const LINKS = [
   {
     text: "Nosotros",
     href: "/about",
-    component: NosotrosContent,
   },
   {
     text: "Mezcal",
