@@ -1,7 +1,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Button from '../ui/Button'
 
 const Welcome = () => {
   const sectionRef = useRef(null)
@@ -41,7 +40,7 @@ const Welcome = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-24 px-6 md:px-16 bg-[#F9F5ED] text-[#0B0D06]"
+      className="py-24 px-6 md:px-16 bg-[#464538] text-white"
     >
       <div className="max-w-4xl mx-auto text-center space-y-5">
         {textLines.map((line, index) => (
@@ -56,11 +55,6 @@ const Welcome = () => {
             </h2>
           </div>
         ))}
-        <div ref={buttonContainerRef} className="pt-10">
-          <Button color="222811" className="px-10 py-4 text-base md:text-lg">
-            Descubre Más
-          </Button>
-        </div>
       </div>
     </section>
   )

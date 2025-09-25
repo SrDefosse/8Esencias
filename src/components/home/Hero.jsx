@@ -17,9 +17,9 @@ const Hero = () => {
         <p className="text-lg md:text-2xl text-amber-100 mb-10 max-w-2xl ml-auto">
           Descubre la tradición milenaria del mezcal artesanal mexicano en cada gota
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-end">
+        <div className="flex flex-col sm:flex-row gap-4 justify-end items-end sm:items-center">
           <Button>
-            Conoce Nuestros Mezcales
+            Nuestros Mezcales
           </Button>
           <Button variant="outline">
             Nuestra Historia

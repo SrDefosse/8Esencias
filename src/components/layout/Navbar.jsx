@@ -88,14 +88,14 @@ const NavLink = ({ children, href, FlyoutContent }) => {
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      <Link to={href} className={`relative ${isActive ? 'text-amber-300' : 'text-white hover:text-amber-300'}`}>
+      <Link to={href} className={`relative ${isActive ? 'text-[#AC8658]' : 'text-white hover:text-[#AC8658]'}`}>
         {children}
         <span
           style={{
             transform: showFlyout || isActive ? "scaleX(1)" : "scaleX(0)",
           }}
           className={`absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full transition-transform duration-300 ease-out ${
-            isActive ? 'bg-amber-500' : 'bg-amber-300'
+            isActive ? 'bg-[#AC8658]' : 'bg-[#AC8658]'
           }`}
         />
       </Link>
@@ -123,16 +123,16 @@ const NavLink = ({ children, href, FlyoutContent }) => {
 const NosotrosContent = () => {
   return (
     <div className="grid h-fit w-full grid-cols-12 shadow-xl lg:h-72 lg:w-[600px] lg:shadow-none xl:w-[750px]">
-      <div className="col-span-12 flex flex-col justify-between bg-amber-800 p-6 lg:col-span-4">
+      <div className="col-span-12 flex flex-col justify-between bg-[#AC8658] p-6 lg:col-span-4">
         <div>
           <h2 className="mb-2 text-xl font-semibold text-white">Nosotros</h2>
-          <p className="mb-6 max-w-xs text-sm text-amber-100">
+          <p className="mb-6 max-w-xs text-sm text-[#F8F7EA]">
             Tradición familiar en la elaboración de mezcal artesanal mexicano desde hace generaciones.
           </p>
         </div>
         <Link
           to="/about"
-          className="flex items-center gap-1 text-xs text-amber-300 hover:underline"
+          className="flex items-center gap-1 text-xs text-[#AC8658] hover:underline"
         >
           Conoce más <FiArrowRight />
         </Link>
@@ -179,35 +179,6 @@ const NosotrosContent = () => {
   );
 };
 
-const MezcalesContent = () => {
-  return (
-    <div className="w-full bg-white p-6 shadow-none lg:w-[300px] lg:shadow-xl">
-      <div className="space-y-6">
-        <div className="space-y-3">
-          <h3 className="font-semibold text-amber-800">Nuestros Mezcales</h3>
-          <Link to="/mezcales" className="block text-sm hover:underline">
-            8 Esencias Espadín
-          </Link>
-          <Link to="/mezcales" className="block text-sm hover:underline">
-            8 Esencias Tobalá
-          </Link>
-          <Link to="/mezcales" className="block text-sm hover:underline">
-            8 Esencias Ensamble
-          </Link>
-          <Link to="/mezcales" className="block text-sm hover:underline">
-            8 Esencias Madrecuixe
-          </Link>
-        </div>
-      </div>
-      <Link
-        to="/mezcales"
-        className="mt-6 w-full block text-center rounded-lg border-2 border-amber-600 px-4 py-2 font-semibold transition-colors hover:bg-amber-600 hover:text-white"
-      >
-        Ver todos los mezcales
-      </Link>
-    </div>
-  );
-};
 
 const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
   const [open, setOpen] = useState(false);
@@ -227,7 +198,7 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
               setMenuOpen(false);
             }}
             to={href}
-            className={isActive ? 'text-amber-600' : ''}
+            className={isActive ? 'text-[#AC8658]' : ''}
           >
             {children}
           </Link>
@@ -246,7 +217,7 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
           onClick={() => setMenuOpen(false)}
           to={href}
           className={`flex w-full cursor-pointer items-center justify-between border-b border-neutral-300 py-6 text-start text-2xl font-semibold ${
-            isActive ? 'text-amber-600' : ''
+            isActive ? 'text-[#AC8658]' : ''
           }`}
         >
           <span>{children}</span>
@@ -262,16 +233,16 @@ const MobileMenuLink = ({ children, href, FoldContent, setMenuOpen }) => {
         >
           <div className="py-4 bg-gray-50 px-4 rounded-lg">
             <div className="space-y-2">
-              <Link to="/about" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-amber-600">
+              <Link to="/about" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-[#AC8658]">
                 Historia
               </Link>
-              <Link to="/process" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-amber-600">
+              <Link to="/process" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-[#AC8658]">
                 Proceso
               </Link>
-              <Link to="/about#team" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-amber-600">
+              <Link to="/about#team" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-[#AC8658]">
                 Maestros
               </Link>
-              <Link to="/about#values" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-amber-600">
+              <Link to="/about#values" onClick={() => setMenuOpen(false)} className="block text-sm hover:text-[#AC8658]">
                 Valores
               </Link>
             </div>
@@ -344,9 +315,8 @@ const LINKS = [
     component: NosotrosContent,
   },
   {
-    text: "Mezcales",
-    href: "/mezcales",
-    component: MezcalesContent,
+    text: "Mezcal",
+    href: "/mezcal",
   },
   {
     text: "Proceso",
